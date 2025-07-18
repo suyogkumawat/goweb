@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: go-web-app
-        image: suyogks21/gowebapp-multistage:{{ .Values.image.tag }}
+        image: suyogks21/go-web-app:{{ .Values.image.tag }}
         ports:
         - containerPort: 8080
