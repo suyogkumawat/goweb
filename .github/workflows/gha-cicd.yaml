@@ -21,8 +21,8 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Set up Go 1.22
-      uses: actions/setup-go@v2
+    - name: Set up Go 1.21
+      uses: actions/setup-go@v4
       with:
         go-version: 1.21
 
@@ -43,4 +43,4 @@ jobs:
       uses: golangci/golangci-lint-action@v6
       with:
         version: latest
-        args: --disable=goanalysis_metalinter
+        args: --enable=gofmt,govet,ineffassign,misspell --disable=unused
